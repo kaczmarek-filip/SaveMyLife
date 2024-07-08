@@ -2,11 +2,13 @@ package org.example.savemylife;
 
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.example.savemylife.interfaces.ElementConfig;
-import org.example.savemylife.interfaces.ElementLayout;
+import org.example.savemylife.interfaces.StandardElement;
 import org.example.savemylife.mainView.MainVBox;
 
-public class MainView extends Stage implements ElementConfig, ElementLayout {
+public class MainView extends Stage implements StandardElement {
+
+    public static final double SCREEN_WIDTH = 800;
+    public static final double SCREEN_HEIGHT = 600;
 
     public MainView() {
         setupLayout();
@@ -16,8 +18,8 @@ public class MainView extends Stage implements ElementConfig, ElementLayout {
 
     @Override
     public void setupConfig() {
-        setWidth(800);
-        setHeight(600);
+        setWidth(SCREEN_WIDTH);
+        setHeight(SCREEN_HEIGHT);
         centerOnScreen();
     }
 

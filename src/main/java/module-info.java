@@ -9,7 +9,11 @@ module org.example.savemylife {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.desktop;
+    requires static lombok;
 
     opens org.example.savemylife to javafx.fxml;
     exports org.example.savemylife;
+    exports org.example.savemylife.displayElement;
+    opens org.example.savemylife.displayElement to javafx.fxml;
 }

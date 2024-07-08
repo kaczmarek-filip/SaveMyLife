@@ -4,18 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feb6d571-7f2a-46e4-8f5f-dfab57375658" name="Changes" comment="Load JavaFX">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/MainView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/interfaces/ElementConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/interfaces/ElementLayout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/interfaces/StandardElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/MainVBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/Scroll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/TopBar.java" afterDir="false" />
+    <list default="true" id="feb6d571-7f2a-46e4-8f5f-dfab57375658" name="Changes" comment="Primary TopBar &amp; ScrollPane">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/data/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/displayElement/Element.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/ScrollList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/MainVBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/MainVBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/Scroll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/Scroll.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -42,9 +41,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2in8j7IJejVq8sDt2Yz5judl32z" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -53,6 +52,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App.executor": "Run",
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -67,12 +67,12 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.savemylife.HelloApplication" />
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.savemylife.App" />
       <module name="SaveMyLife" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.savemylife.*" />
+          <option name="PATTERN" value="org.example.savemylife.displayElement.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -82,7 +82,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -102,7 +102,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720115112264</updated>
-      <workItem from="1720115113286" duration="2392000" />
+      <workItem from="1720115113286" duration="5900000" />
+      <workItem from="1720132583872" duration="258000" />
+      <workItem from="1720455505936" duration="325000" />
+      <workItem from="1720455943700" duration="686000" />
     </task>
     <task id="LOCAL-00001" summary="Load JavaFX">
       <option name="closed" value="true" />
@@ -112,14 +115,34 @@
       <option name="project" value="LOCAL" />
       <updated>1720115156564</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Primary TopBar &amp; ScrollPane">
+      <option name="closed" value="true" />
+      <created>1720117738117</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720117738117</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Load JavaFX" />
-    <option name="LAST_COMMIT_MESSAGE" value="Load JavaFX" />
+    <MESSAGE value="Primary TopBar &amp; ScrollPane" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primary TopBar &amp; ScrollPane" />
   </component>
 </project>
