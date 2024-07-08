@@ -19,10 +19,10 @@ public class App extends Application {
         new MainView();
 
 
-        Task task = new Task("name", "From", "to");
-
-        TaskJSON.getInstance().add(task);
-        TaskJSON.getInstance().add(new Task("name2", "From", "to"));
+//        Task task = new Task("name", "From", "to");
+//
+//        TaskJSON.getInstance().add(task);
+//        TaskJSON.getInstance().add(new Task("name2", "From", "to"));
     }
 
     public static void main(String[] args) {
