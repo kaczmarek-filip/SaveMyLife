@@ -7,9 +7,10 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import lombok.Getter;
 import org.example.savemylife.data.Task;
+import org.example.savemylife.interfaces.ElementListener;
 import org.example.savemylife.interfaces.StandardElement;
 
-public class Element extends GridPane implements StandardElement {
+public class Element extends GridPane implements StandardElement, ElementListener {
 
     @Getter
     private final Task task;
@@ -18,6 +19,8 @@ public class Element extends GridPane implements StandardElement {
         this.task = task;
         setupConfig();
         setupLayout();
+
+        doubleClick();
     }
 
     @Override
@@ -27,7 +30,7 @@ public class Element extends GridPane implements StandardElement {
         setHgap(10);
         setVgap(10);
 
-        setColumns(5, 25, 25, 25);
+        setColumns(5, 15, 40, 40);
     }
 
     @Override
@@ -42,8 +45,23 @@ public class Element extends GridPane implements StandardElement {
         for(int i : colWidth) {
             ColumnConstraints col = new ColumnConstraints();
             col.setPercentWidth(i);
+            col.setMaxWidth(i);
 
             getColumnConstraints().add(col);
         }
+    }
+
+    @Override
+    public void oneClick() {
+
+    }
+
+    @Override
+    public void doubleClick() {
+        setOnMouseClicked(event -> {
+            if (event.getClickCount() == 2) {
+                System.out.println("Clicked");
+            }
+        });
     }
 }

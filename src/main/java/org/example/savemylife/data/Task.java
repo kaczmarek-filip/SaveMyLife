@@ -12,13 +12,17 @@ public class Task {
     private String name;
     private String from;
     private String to;
+    private int frequency;
 
-    public Task(String name, String from, String to) {
+    public Task(String name, String from, String to, int frequency) {
         this.id = UUID.randomUUID();
         this.name = name;
         this.from = from;
         this.to = to;
+        this.frequency = frequency;
     }
 
-    public Task() {}
+    public Task() {
+        this.id = UUID.randomUUID();
+    }
 }

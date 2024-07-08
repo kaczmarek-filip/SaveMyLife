@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feb6d571-7f2a-46e4-8f5f-dfab57375658" name="Changes" comment="Adding and downloading data (JSON)">
-      <change afterPath="$PROJECT_DIR$/.idea/jsonSchemas.xml" afterDir="false" />
+    <list default="true" id="feb6d571-7f2a-46e4-8f5f-dfab57375658" name="Changes" comment="Columns on ListView">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/NewView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/data/FrequencyEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/interfaces/ElementListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/TopBarButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/CreateComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/FieldsEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/FieldsFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/MainLayout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/data/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/data/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/displayElement/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/displayElement/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/TopBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/TopBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task.json" beforeDir="false" afterPath="$PROJECT_DIR$/task.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +28,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="AnnotationType" />
         <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -61,6 +72,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.savemylife.newView" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example.savemylife" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.savemylife.App" />
@@ -100,7 +119,7 @@
       <workItem from="1720115113286" duration="5900000" />
       <workItem from="1720132583872" duration="258000" />
       <workItem from="1720455505936" duration="325000" />
-      <workItem from="1720455943700" duration="3891000" />
+      <workItem from="1720455943700" duration="12396000" />
     </task>
     <task id="LOCAL-00001" summary="Load JavaFX">
       <option name="closed" value="true" />
@@ -134,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720458854922</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Columns on ListView">
+      <option name="closed" value="true" />
+      <created>1720459944383</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720459944383</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +183,8 @@
     <MESSAGE value="Primary TopBar &amp; ScrollPane" />
     <MESSAGE value="Primary design listView" />
     <MESSAGE value="Adding and downloading data (JSON)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding and downloading data (JSON)" />
+    <MESSAGE value="Columns on ListView" />
+    <option name="LAST_COMMIT_MESSAGE" value="Columns on ListView" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
