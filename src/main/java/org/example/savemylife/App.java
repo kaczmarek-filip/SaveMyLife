@@ -1,11 +1,12 @@
 package org.example.savemylife;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.example.savemylife.data.Task;
+import org.example.savemylife.data.TaskJSON;
 
 import java.io.IOException;
+
 public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
@@ -16,6 +17,12 @@ public class App extends Application {
 //        stage.show();
 
         new MainView();
+
+
+        Task task = new Task("name", "From", "to");
+
+        TaskJSON.getInstance().add(task);
+        TaskJSON.getInstance().add(new Task("name2", "From", "to"));
     }
 
     public static void main(String[] args) {

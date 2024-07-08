@@ -3,14 +3,15 @@ package org.example.savemylife.displayElement;
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
+import org.example.savemylife.data.Task;
 import org.example.savemylife.interfaces.StandardElement;
 
 public class Element extends HBox implements StandardElement {
 
-    private final String string;
+    private final Task task;
 
-    public Element(String string) {
-        this.string = string;
+    public Element(Task task) {
+        this.task = task;
         setupConfig();
         setupLayout();
     }
@@ -22,6 +23,6 @@ public class Element extends HBox implements StandardElement {
 
     @Override
     public void setupLayout() {
-        getChildren().add(new Label(string));
+        getChildren().add(new Label(task.getName()));
     }
 }

@@ -11,9 +11,11 @@ module org.example.savemylife {
     requires eu.hansolo.tilesfx;
     requires java.desktop;
     requires static lombok;
+    requires com.fasterxml.jackson.databind;
 
     opens org.example.savemylife to javafx.fxml;
     exports org.example.savemylife;
     exports org.example.savemylife.displayElement;
+    exports org.example.savemylife.data;
     opens org.example.savemylife.displayElement to javafx.fxml;
 }
