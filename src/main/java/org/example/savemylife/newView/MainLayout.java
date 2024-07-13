@@ -29,11 +29,8 @@ public class MainLayout extends GridPane implements StandardElement {
 
     @Override
     public void setupLayout() {
-
-        for (FieldsEnum field : FieldsEnum.values()) {
-            new CreateComponent(field, this);
-        }
-
+        new FieldFactory(this);
     }
+
 
 }
