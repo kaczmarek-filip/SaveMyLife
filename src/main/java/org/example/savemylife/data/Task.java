@@ -1,6 +1,7 @@
 package org.example.savemylife.data;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.File;
@@ -8,6 +9,7 @@ import java.util.UUID;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class Task {
     private UUID id;
     private String name;
@@ -15,6 +17,7 @@ public class Task {
     private File to;
     private int frequency;
     private FrequencyEnum frequencyEnum;
+    private String frequencyWithUtil;
 
     public Task(String name, File from, File to, int frequency, FrequencyEnum frequencyEnum) {
         this.id = UUID.randomUUID();
@@ -23,13 +26,7 @@ public class Task {
         this.to = to;
         this.frequency = frequency;
         this.frequencyEnum = frequencyEnum;
-    }
 
-    public Task() {
-        this.id = UUID.randomUUID();
-    }
-
-    public String getFrequencyWithUtil() {
-        return frequency + " " + frequencyEnum.getLabel();
+        this.frequencyWithUtil = frequency + " " + frequencyEnum.getLabel();
     }
 }
