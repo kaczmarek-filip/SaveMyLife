@@ -43,19 +43,22 @@ public class FieldHelper {
 
     static void buttonActionListener(Button button, FieldFactory f) {
         button.setOnAction(e -> {
-            Task task = new Task();
-            task.setName(f.nameField.getText());
-            task.setFrom(f.fromField.getText());
-            task.setTo(f.toField.getText());
+            String name = f.nameField.getText();
+            String from = f.fromField.getText();
+            String to = f.toField.getText();
             String frequency = f.frequencyField.getText().trim();
-            if (!frequency.isEmpty()) {
-                task.setFrequency(Integer.parseInt(frequency));
-            }
 
-            if (task.getName() == null || task.getFrom() == null || task.getTo() == null || task.getFrequency() == 0) {
+
+            if (name.isEmpty() || from.isEmpty() || to.isEmpty() || frequency.isEmpty()) {
                 Notifications.create().title("Warning").text("Some fields are empty").showWarning();
             } else {
                 try {
+                    Task task = new Task(
+                            name,
+                            new File(from),
+                            new File(to),
+                            Integer.parseInt(frequency)
+                    );
                     TaskJSON.getInstance().add(task);
                     NewView.getInstance().close();
                     ScrollList.getInstance().refresh();

@@ -30,15 +30,16 @@ public class Element extends GridPane implements StandardElement, ElementListene
         setHgap(10);
         setVgap(10);
 
-        setColumns(5, 15, 40, 40);
+        setColumns(5, 25, 30, 30, 10);
     }
 
     @Override
     public void setupLayout() {
         add(new CheckBox(), 0, 0);
         add(new Label(task.getName()), 1, 0);
-        add(new Label(task.getFrom()), 2, 0);
-        add(new Label(task.getTo()), 3, 0);
+        add(new Label(task.getFrom().getName()), 2, 0);
+        add(new Label(task.getTo().getName()), 3, 0);
+        add(new Label(String.valueOf(task.getFrequency())), 4, 0);
     }
 
     private void setColumns(int ... colWidth) {

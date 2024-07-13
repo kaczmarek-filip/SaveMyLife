@@ -53,7 +53,9 @@ public class TaskJSON implements JsonMethods<Task> {
             }
         } catch (IOException e) {
             taskList = new ArrayList<>();
-            e.printStackTrace();
+            System.err.println("Error loading task list");
+//            e.printStackTrace();
+            //tODO: Co w przypadku braku pliku
         }
     }
 
