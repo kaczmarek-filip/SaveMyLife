@@ -3,7 +3,7 @@ package org.example.savemylife.newView;
 import javafx.scene.control.*;
 import javafx.stage.DirectoryChooser;
 import org.controlsfx.control.Notifications;
-import org.example.savemylife.NewView;
+import org.example.savemylife.InfoView;
 import org.example.savemylife.data.FrequencyEnum;
 import org.example.savemylife.data.Task;
 import org.example.savemylife.data.TaskJSON;
@@ -16,7 +16,7 @@ public class FieldHelper {
         button.setOnAction(e -> {
             DirectoryChooser directoryChooser = new DirectoryChooser();
 
-            File selectedDirectory = directoryChooser.showDialog(grid.getNewView());
+            File selectedDirectory = directoryChooser.showDialog(grid.getInfoView());
             if (selectedDirectory != null) {
                 label.setText(selectedDirectory.getName());
                 field.setText(selectedDirectory.getAbsolutePath());
@@ -62,7 +62,7 @@ public class FieldHelper {
                             frequencyEnum
                     );
                     TaskJSON.getInstance().add(task);
-                    NewView.getInstance().close();
+                    InfoView.getInstance().close();
                     ScrollList.getInstance().refresh();
                 } catch (Exception ex) {
                     ex.printStackTrace();

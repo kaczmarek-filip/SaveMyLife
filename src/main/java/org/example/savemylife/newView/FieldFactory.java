@@ -4,10 +4,11 @@ import javafx.geometry.HPos;
 import javafx.geometry.VPos;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import lombok.Getter;
 import org.example.savemylife.interfaces.FieldCreator;
 
 import static org.example.savemylife.newView.FieldHelper.*;
-
+@Getter
 public class FieldFactory implements FieldCreator {
 
     private final MainLayout grid;
@@ -15,7 +16,9 @@ public class FieldFactory implements FieldCreator {
     TextField nameField = new TextField();
     TextField frequencyField = new TextField();
     TextField fromField = new TextField();
+    Label fromSelectedLabel = new Label("");
     TextField toField = new TextField();
+    Label toSelectedLabel = new Label("");
     ComboBox<String> frequencyComboBox = new ComboBox<>();
 
     public FieldFactory(MainLayout grid) {
@@ -37,21 +40,19 @@ public class FieldFactory implements FieldCreator {
     private void from() {
         Label label = new Label("From");
         Button choose = new Button("Choose directory");
-        Label selected = new Label("");
 
-        fileChooser(grid, choose, selected, fromField);
+        fileChooser(grid, choose, fromSelectedLabel, fromField);
 
-        add(1, label, choose, selected);
+        add(1, label, choose, fromSelectedLabel);
     }
 
     private void to() {
         Label label = new Label("To");
         Button choose = new Button("Choose directory");
-        Label selected = new Label("");
 
-        fileChooser(grid, choose, selected, toField);
+        fileChooser(grid, choose, toSelectedLabel, toField);
 
-        add(2, label, choose, selected);
+        add(2, label, choose, toSelectedLabel);
     }
 
     private void frequency() {

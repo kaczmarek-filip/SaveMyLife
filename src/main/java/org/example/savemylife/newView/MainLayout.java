@@ -4,16 +4,17 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.layout.GridPane;
 import lombok.Getter;
-import org.example.savemylife.NewView;
+import org.example.savemylife.InfoView;
 import org.example.savemylife.interfaces.StandardElement;
 
+@Getter
 public class MainLayout extends GridPane implements StandardElement {
 
-    @Getter
-    private final NewView newView;
+    private final InfoView infoView;
+    private FieldFactory fieldFactory;
 
-    public MainLayout(NewView newView) {
-        this.newView = newView;
+    public MainLayout(InfoView infoView) {
+        this.infoView = infoView;
         setupConfig();
         setupLayout();
     }
@@ -29,7 +30,7 @@ public class MainLayout extends GridPane implements StandardElement {
 
     @Override
     public void setupLayout() {
-        new FieldFactory(this);
+        fieldFactory = new FieldFactory(this);
     }
 
 

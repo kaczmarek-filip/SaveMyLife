@@ -1,15 +1,14 @@
 package org.example.savemylife.displayElement;
 
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tooltip;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.util.Duration;
 import lombok.Getter;
+import org.example.savemylife.InfoView;
 import org.example.savemylife.data.Task;
 import org.example.savemylife.interfaces.ElementListener;
 import org.example.savemylife.interfaces.StandardElement;
@@ -75,6 +74,7 @@ public class Element extends GridPane implements StandardElement, ElementListene
         setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) {
                 System.out.println("Clicked");
+                new InfoView().setFields(task);
             }
         });
     }
