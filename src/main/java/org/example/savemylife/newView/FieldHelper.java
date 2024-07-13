@@ -61,7 +61,19 @@ public class FieldHelper {
                             Integer.parseInt(frequency),
                             frequencyEnum
                     );
-                    TaskJSON.getInstance().add(task);
+
+
+
+                    if (f.getTask() == null) {
+                        TaskJSON.getInstance().add(task);
+                        System.out.println("brak taska");
+                    } else {
+                        TaskJSON.getInstance().update(f.getTask());
+                        System.out.println("z taska");
+                    }
+
+
+
                     InfoView.getInstance().close();
                     ScrollList.getInstance().refresh();
                 } catch (Exception ex) {

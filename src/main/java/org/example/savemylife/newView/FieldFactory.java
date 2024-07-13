@@ -5,6 +5,7 @@ import javafx.geometry.VPos;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import lombok.Getter;
+import org.example.savemylife.data.Task;
 import org.example.savemylife.interfaces.FieldCreator;
 
 import static org.example.savemylife.newView.FieldHelper.*;
@@ -12,6 +13,7 @@ import static org.example.savemylife.newView.FieldHelper.*;
 public class FieldFactory implements FieldCreator {
 
     private final InfoLayout grid;
+    private Task task;
 
     TextField nameField = new TextField();
     TextField frequencyField = new TextField();
@@ -84,5 +86,18 @@ public class FieldFactory implements FieldCreator {
         for (int i = 0; i < controls.length; i++) {
             grid.add(controls[i], i, row);
         }
+    }
+    public void setFields(Task task) {
+        this.task = task;
+
+        nameField.setText(task.getName());
+        frequencyField.setText(String.valueOf(task.getFrequency()));
+        frequencyComboBox.setValue(task.getFrequencyEnum().getLabel());
+
+        fromField.setText(task.getFrom().getAbsolutePath());
+        fromSelectedLabel.setText(task.getFrom().getName());
+
+        toField.setText(task.getTo().getAbsolutePath());
+        toSelectedLabel.setText(task.getTo().getName());
     }
 }

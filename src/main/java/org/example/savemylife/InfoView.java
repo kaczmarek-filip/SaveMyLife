@@ -1,6 +1,7 @@
 package org.example.savemylife;
 
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.example.savemylife.data.Task;
 import org.example.savemylife.interfaces.StandardElement;
@@ -22,9 +23,14 @@ public class InfoView extends Stage implements StandardElement {
     @Override
     public void setupConfig() {
         setWidth(400);
-//        setHeight(400);
         centerOnScreen();
         setResizable(false);
+
+        initModality(Modality.APPLICATION_MODAL);
+
+        setOnCloseRequest(event -> {
+            instance = null;
+        });
     }
 
     @Override
@@ -43,14 +49,12 @@ public class InfoView extends Stage implements StandardElement {
     }
 
     public void setFields(Task task) {
-        infoLayout.getFieldFactory().getNameField().setText(task.getName());
-        infoLayout.getFieldFactory().getFrequencyField().setText(String.valueOf(task.getFrequency()));
-        infoLayout.getFieldFactory().getFrequencyComboBox().setValue(task.getFrequencyEnum().getLabel());
+        infoLayout.getFieldFactory().setFields(task);
+    }
 
-        infoLayout.getFieldFactory().getFromField().setText(task.getFrom().getAbsolutePath());
-        infoLayout.getFieldFactory().getFromSelectedLabel().setText(task.getFrom().getName());
-
-        infoLayout.getFieldFactory().getToField().setText(task.getTo().getAbsolutePath());
-        infoLayout.getFieldFactory().getToSelectedLabel().setText(task.getTo().getName());
+    @Override
+    public void close() {
+        super.close();
+        instance = null;
     }
 }

@@ -15,7 +15,7 @@ public class TopBarButton extends Button implements ElementListener {
     @Override
     public void oneClick() {
         setOnMouseClicked(mouseEvent -> {
-            new InfoView();
+            InfoView.getInstance();
         });
     }
 
