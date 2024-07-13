@@ -1,12 +1,12 @@
-package org.example.savemylife.mainView;
+package org.example.savemylife.topBar;
 
 import javafx.scene.control.Button;
 import org.example.savemylife.InfoView;
 import org.example.savemylife.interfaces.ElementListener;
 
-public class TopBarButton extends Button implements ElementListener {
+public class CreateButton extends Button implements ElementListener {
 
-    public TopBarButton(String s) {
+    public CreateButton(String s) {
         super(s);
 
         oneClick();

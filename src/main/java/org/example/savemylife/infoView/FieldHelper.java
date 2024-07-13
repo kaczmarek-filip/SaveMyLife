@@ -1,4 +1,4 @@
-package org.example.savemylife.newView;
+package org.example.savemylife.infoView;
 
 import javafx.scene.control.*;
 import javafx.stage.DirectoryChooser;

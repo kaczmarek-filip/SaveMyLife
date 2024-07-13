@@ -1,11 +1,10 @@
-package org.example.savemylife.newView;
+package org.example.savemylife.infoView;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.layout.GridPane;
 import lombok.Getter;
 import org.example.savemylife.InfoView;
-import org.example.savemylife.data.Task;
 import org.example.savemylife.interfaces.StandardElement;
 
 @Getter

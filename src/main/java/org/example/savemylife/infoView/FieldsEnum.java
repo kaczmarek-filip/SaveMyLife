@@ -1,4 +1,4 @@
-package org.example.savemylife.newView;
+package org.example.savemylife.infoView;
 
 public enum FieldsEnum {
     NAME,

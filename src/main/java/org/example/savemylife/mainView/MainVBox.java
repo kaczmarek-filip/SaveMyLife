@@ -3,6 +3,7 @@ package org.example.savemylife.mainView;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import org.example.savemylife.interfaces.StandardElement;
+import org.example.savemylife.topBar.TopBar;
 
 
 public class MainVBox extends VBox implements StandardElement {
@@ -10,6 +11,7 @@ public class MainVBox extends VBox implements StandardElement {
     public MainVBox() {
         setupConfig();
         setupLayout();
+
     }
 
 
@@ -20,7 +22,7 @@ public class MainVBox extends VBox implements StandardElement {
 
     @Override
     public void setupLayout() {
-        ScrollList scrollList = new ScrollList();
+        ScrollList scrollList = ScrollList.getInstance();
         VBox.setVgrow(scrollList, Priority.ALWAYS);
         getChildren().addAll(
                 new TopBar(),

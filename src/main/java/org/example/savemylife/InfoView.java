@@ -5,7 +5,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.example.savemylife.data.Task;
 import org.example.savemylife.interfaces.StandardElement;
-import org.example.savemylife.newView.InfoLayout;
+import org.example.savemylife.infoView.InfoLayout;
 
 public class InfoView extends Stage implements StandardElement {
 

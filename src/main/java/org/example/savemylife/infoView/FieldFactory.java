@@ -1,4 +1,4 @@
-package org.example.savemylife.newView;
+package org.example.savemylife.infoView;
 
 import javafx.geometry.HPos;
 import javafx.geometry.VPos;
@@ -8,7 +8,7 @@ import lombok.Getter;
 import org.example.savemylife.data.Task;
 import org.example.savemylife.interfaces.FieldCreator;
 
-import static org.example.savemylife.newView.FieldHelper.*;
+import static org.example.savemylife.infoView.FieldHelper.*;
 @Getter
 public class FieldFactory implements FieldCreator {
 

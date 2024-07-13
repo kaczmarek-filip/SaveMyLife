@@ -12,13 +12,16 @@ import org.example.savemylife.InfoView;
 import org.example.savemylife.data.Task;
 import org.example.savemylife.interfaces.ElementListener;
 import org.example.savemylife.interfaces.StandardElement;
+import org.example.savemylife.mainView.ScrollList;
+import org.example.savemylife.topBar.EditButton;
 
 import java.io.File;
-
+@Getter
 public class Element extends GridPane implements StandardElement, ElementListener {
 
-    @Getter
+
     private final Task task;
+    private CheckBox checkBox = new CheckBox();;
 
     public Element(Task task) {
         this.task = task;
@@ -47,7 +50,18 @@ public class Element extends GridPane implements StandardElement, ElementListene
         setTooltip(fromLabel, task.getFrom());
         setTooltip(toLabel, task.getTo());
 
-        add(new CheckBox(), 0, 0);
+        checkBox.setOnAction(event -> {
+            ScrollList.getInstance().getSelectionModel().clearSelection();
+            if (checkBox.isSelected()) {
+                ScrollList.getInstance().getSelectionModel().select(this);
+            } else {
+                ScrollList.getInstance().getSelectionModel().clearSelection(ScrollList.getInstance().getSelectionModel().getSelectedIndex());
+            }
+            EditButton.getInstance().trigger();
+            System.out.println(ScrollList.getInstance().getSelectionModel().getSelectedItems());
+        });
+
+        add(checkBox, 0, 0);
         add(new Label(task.getName()), 1, 0);
         add(fromLabel, 2, 0);
         add(toLabel, 3, 0);

@@ -1,4 +1,4 @@
-package org.example.savemylife.mainView;
+package org.example.savemylife.topBar;
 
 import javafx.scene.control.ToolBar;
 import org.example.savemylife.interfaces.StandardElement;
@@ -12,7 +12,8 @@ public class TopBar extends ToolBar implements StandardElement {
 
     @Override
     public void setupLayout() {
-        getItems().add(new TopBarButton("New"));
+        getItems().add(new CreateButton("New"));
+        getItems().add(EditButton.getInstance());
     }
 
     @Override
