@@ -4,12 +4,12 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.example.savemylife.data.Task;
 import org.example.savemylife.interfaces.StandardElement;
-import org.example.savemylife.newView.MainLayout;
+import org.example.savemylife.newView.InfoLayout;
 
 public class InfoView extends Stage implements StandardElement {
 
     private static InfoView instance;
-    private final MainLayout mainLayout = new MainLayout(this);
+    private final InfoLayout infoLayout = new InfoLayout(this);
 
     public InfoView() {
         setTitle("Create task");
@@ -29,7 +29,7 @@ public class InfoView extends Stage implements StandardElement {
 
     @Override
     public void setupLayout() {
-        Scene scene = new Scene(mainLayout);
+        Scene scene = new Scene(infoLayout);
 
         setScene(scene);
         show();
@@ -43,14 +43,14 @@ public class InfoView extends Stage implements StandardElement {
     }
 
     public void setFields(Task task) {
-        mainLayout.getFieldFactory().getNameField().setText(task.getName());
-        mainLayout.getFieldFactory().getFrequencyField().setText(String.valueOf(task.getFrequency()));
-        mainLayout.getFieldFactory().getFrequencyComboBox().setValue(task.getFrequencyEnum().getLabel());
+        infoLayout.getFieldFactory().getNameField().setText(task.getName());
+        infoLayout.getFieldFactory().getFrequencyField().setText(String.valueOf(task.getFrequency()));
+        infoLayout.getFieldFactory().getFrequencyComboBox().setValue(task.getFrequencyEnum().getLabel());
 
-        mainLayout.getFieldFactory().getFromField().setText(task.getFrom().getAbsolutePath());
-        mainLayout.getFieldFactory().getFromSelectedLabel().setText(task.getFrom().getName());
+        infoLayout.getFieldFactory().getFromField().setText(task.getFrom().getAbsolutePath());
+        infoLayout.getFieldFactory().getFromSelectedLabel().setText(task.getFrom().getName());
 
-        mainLayout.getFieldFactory().getToField().setText(task.getTo().getAbsolutePath());
-        mainLayout.getFieldFactory().getToSelectedLabel().setText(task.getTo().getName());
+        infoLayout.getFieldFactory().getToField().setText(task.getTo().getAbsolutePath());
+        infoLayout.getFieldFactory().getToSelectedLabel().setText(task.getTo().getName());
     }
 }

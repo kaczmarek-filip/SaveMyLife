@@ -11,7 +11,7 @@ import static org.example.savemylife.newView.FieldHelper.*;
 @Getter
 public class FieldFactory implements FieldCreator {
 
-    private final MainLayout grid;
+    private final InfoLayout grid;
 
     TextField nameField = new TextField();
     TextField frequencyField = new TextField();
@@ -21,7 +21,7 @@ public class FieldFactory implements FieldCreator {
     Label toSelectedLabel = new Label("");
     ComboBox<String> frequencyComboBox = new ComboBox<>();
 
-    public FieldFactory(MainLayout grid) {
+    public FieldFactory(InfoLayout grid) {
         this.grid = grid;
 
         name();

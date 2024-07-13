@@ -12,7 +12,7 @@ import org.example.savemylife.mainView.ScrollList;
 import java.io.File;
 
 public class FieldHelper {
-    static void fileChooser(MainLayout grid, Button button, Label label, TextField field) {
+    static void fileChooser(InfoLayout grid, Button button, Label label, TextField field) {
         button.setOnAction(e -> {
             DirectoryChooser directoryChooser = new DirectoryChooser();
 

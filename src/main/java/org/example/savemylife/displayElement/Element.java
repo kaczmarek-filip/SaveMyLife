@@ -73,7 +73,6 @@ public class Element extends GridPane implements StandardElement, ElementListene
     public void doubleClick() {
         setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) {
-                System.out.println("Clicked");
                 new InfoView().setFields(task);
             }
         });

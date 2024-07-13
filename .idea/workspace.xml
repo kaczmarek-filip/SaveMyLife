@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feb6d571-7f2a-46e4-8f5f-dfab57375658" name="Changes" comment="small fix">
+    <list default="true" id="feb6d571-7f2a-46e4-8f5f-dfab57375658" name="Changes" comment="Edit view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/NewView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/NewView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/InfoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/InfoView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/displayElement/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/displayElement/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/TopBarButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/TopBarButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/FieldFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/FieldFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/MainLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/MainLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/FieldHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/FieldHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/MainLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/InfoLayout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task.json" beforeDir="false" afterPath="$PROJECT_DIR$/task.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +114,8 @@
       <workItem from="1720132583872" duration="258000" />
       <workItem from="1720455505936" duration="325000" />
       <workItem from="1720455943700" duration="12784000" />
-      <workItem from="1720894736338" duration="8869000" />
+      <workItem from="1720894736338" duration="9529000" />
+      <workItem from="1720904800781" duration="865000" />
     </task>
     <task id="LOCAL-00001" summary="Load JavaFX">
       <option name="closed" value="true" />
@@ -210,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720903533764</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Edit view">
+      <option name="closed" value="true" />
+      <created>1720904124759</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720904124759</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +251,8 @@
     <MESSAGE value="fullPath on tooltip" />
     <MESSAGE value="Frequency utils" />
     <MESSAGE value="small fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="small fix" />
+    <MESSAGE value="Edit view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit view" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

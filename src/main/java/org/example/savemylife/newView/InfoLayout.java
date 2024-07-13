@@ -5,15 +5,16 @@ import javafx.geometry.Pos;
 import javafx.scene.layout.GridPane;
 import lombok.Getter;
 import org.example.savemylife.InfoView;
+import org.example.savemylife.data.Task;
 import org.example.savemylife.interfaces.StandardElement;
 
 @Getter
-public class MainLayout extends GridPane implements StandardElement {
+public class InfoLayout extends GridPane implements StandardElement {
 
     private final InfoView infoView;
     private FieldFactory fieldFactory;
 
-    public MainLayout(InfoView infoView) {
+    public InfoLayout(InfoView infoView) {
         this.infoView = infoView;
         setupConfig();
         setupLayout();
