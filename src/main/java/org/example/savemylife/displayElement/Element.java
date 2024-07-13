@@ -52,7 +52,7 @@ public class Element extends GridPane implements StandardElement, ElementListene
         add(new Label(task.getName()), 1, 0);
         add(fromLabel, 2, 0);
         add(toLabel, 3, 0);
-        add(new Label(String.valueOf(task.getFrequency())), 4, 0);
+        add(new Label(task.getFrequencyWithUtil()), 4, 0);
     }
 
     private void setColumns(int ... colWidth) {

@@ -47,6 +47,7 @@ public class FieldHelper {
             String from = f.fromField.getText();
             String to = f.toField.getText();
             String frequency = f.frequencyField.getText().trim();
+            FrequencyEnum frequencyEnum = FrequencyEnum.fromString(f.frequencyComboBox.getValue());
 
 
             if (name.isEmpty() || from.isEmpty() || to.isEmpty() || frequency.isEmpty()) {
@@ -57,7 +58,8 @@ public class FieldHelper {
                             name,
                             new File(from),
                             new File(to),
-                            Integer.parseInt(frequency)
+                            Integer.parseInt(frequency),
+                            frequencyEnum
                     );
                     TaskJSON.getInstance().add(task);
                     NewView.getInstance().close();

@@ -16,6 +16,7 @@ public class FieldFactory implements FieldCreator {
     TextField frequencyField = new TextField();
     TextField fromField = new TextField();
     TextField toField = new TextField();
+    ComboBox<String> frequencyComboBox = new ComboBox<>();
 
     public FieldFactory(MainLayout grid) {
         this.grid = grid;
@@ -55,13 +56,13 @@ public class FieldFactory implements FieldCreator {
 
     private void frequency() {
         Label label = new Label("Frequency");
-        ComboBox<String> comboBox = new ComboBox<>();
+
 
         frequencyFormatter(frequencyField);
 
-        frequencyEnumComboBox(comboBox);
+        frequencyEnumComboBox(frequencyComboBox);
 
-        add(3, label, frequencyField, comboBox);
+        add(3, label, frequencyField, frequencyComboBox);
     }
 
     private void submitButton() {

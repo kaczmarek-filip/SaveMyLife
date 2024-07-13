@@ -14,16 +14,22 @@ public class Task {
     private File from;
     private File to;
     private int frequency;
+    private FrequencyEnum frequencyEnum;
 
-    public Task(String name, File from, File to, int frequency) {
+    public Task(String name, File from, File to, int frequency, FrequencyEnum frequencyEnum) {
         this.id = UUID.randomUUID();
         this.name = name;
         this.from = from;
         this.to = to;
         this.frequency = frequency;
+        this.frequencyEnum = frequencyEnum;
     }
 
     public Task() {
         this.id = UUID.randomUUID();
+    }
+
+    public String getFrequencyWithUtil() {
+        return frequency + " " + frequencyEnum.getLabel();
     }
 }
