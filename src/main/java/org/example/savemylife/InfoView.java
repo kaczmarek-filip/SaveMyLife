@@ -12,7 +12,7 @@ public class InfoView extends Stage implements StandardElement {
     private static InfoView instance;
     private final InfoLayout infoLayout = new InfoLayout(this);
 
-    public InfoView() {
+    private InfoView() {
         setTitle("Create task");
         setupConfig();
         setupLayout();

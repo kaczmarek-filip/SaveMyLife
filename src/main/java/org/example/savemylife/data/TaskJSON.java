@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class TaskJSON implements JsonMethods<Task> {
     private static final String FILE_PATH = "task.json";
@@ -17,7 +18,7 @@ public class TaskJSON implements JsonMethods<Task> {
     private ObjectMapper objectMapper;
     private static TaskJSON instance;
 
-    public TaskJSON() {
+    private TaskJSON() {
         this.taskList = new ArrayList<>();
         this.objectMapper = new ObjectMapper();
         loadTasks();
@@ -45,11 +46,26 @@ public class TaskJSON implements JsonMethods<Task> {
         }
     }
 
+    public void update(UUID uuid, Task updatedTask) {
+        updatedTask.setId(uuid);
+        for (Task task : taskList) {
+            if (task.getId().equals(uuid)) {
+                int index = taskList.indexOf(task);
+                taskList.set(index, updatedTask);
+                saveTasks();
+                return;
+            }
+        }
+
+        System.err.println("Task not found");
+    }
+
     private void loadTasks() {
         File file = new File(FILE_PATH);
         try {
             if (file.exists()) {
-                taskList = objectMapper.readValue(file, new TypeReference<List<Task>>() {});
+                taskList = objectMapper.readValue(file, new TypeReference<List<Task>>() {
+                });
             }
         } catch (IOException e) {
             taskList = new ArrayList<>();
