@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feb6d571-7f2a-46e4-8f5f-dfab57375658" name="Changes" comment="rework newView FieldFactory">
+    <list default="true" id="feb6d571-7f2a-46e4-8f5f-dfab57375658" name="Changes" comment="from &amp; to as a File class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/data/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/data/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/data/TaskJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/data/TaskJSON.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/displayElement/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/displayElement/Element.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/FieldHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/FieldHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task.json" beforeDir="false" afterPath="$PROJECT_DIR$/task.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +108,7 @@
       <workItem from="1720132583872" duration="258000" />
       <workItem from="1720455505936" duration="325000" />
       <workItem from="1720455943700" duration="12784000" />
-      <workItem from="1720894736338" duration="6208000" />
+      <workItem from="1720894736338" duration="7185000" />
     </task>
     <task id="LOCAL-00001" summary="Load JavaFX">
       <option name="closed" value="true" />
@@ -178,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720899816307</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="from &amp; to as a File class">
+      <option name="closed" value="true" />
+      <created>1720901538783</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1720901538783</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +208,8 @@
     <MESSAGE value="Creating tasks" />
     <MESSAGE value="Refreshing grid" />
     <MESSAGE value="rework newView FieldFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="rework newView FieldFactory" />
+    <MESSAGE value="from &amp; to as a File class" />
+    <option name="LAST_COMMIT_MESSAGE" value="from &amp; to as a File class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

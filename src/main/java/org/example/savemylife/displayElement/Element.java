@@ -1,14 +1,20 @@
 package org.example.savemylife.displayElement;
 
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tooltip;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
+import javafx.util.Duration;
 import lombok.Getter;
 import org.example.savemylife.data.Task;
 import org.example.savemylife.interfaces.ElementListener;
 import org.example.savemylife.interfaces.StandardElement;
+
+import java.io.File;
 
 public class Element extends GridPane implements StandardElement, ElementListener {
 
@@ -21,6 +27,7 @@ public class Element extends GridPane implements StandardElement, ElementListene
         setupLayout();
 
         doubleClick();
+//        mouseEntered();
     }
 
     @Override
@@ -35,10 +42,16 @@ public class Element extends GridPane implements StandardElement, ElementListene
 
     @Override
     public void setupLayout() {
+        Label fromLabel = new Label(task.getFrom().getName());
+        Label toLabel = new Label(task.getTo().getName());
+
+        setTooltip(fromLabel, task.getFrom());
+        setTooltip(toLabel, task.getTo());
+
         add(new CheckBox(), 0, 0);
         add(new Label(task.getName()), 1, 0);
-        add(new Label(task.getFrom().getName()), 2, 0);
-        add(new Label(task.getTo().getName()), 3, 0);
+        add(fromLabel, 2, 0);
+        add(toLabel, 3, 0);
         add(new Label(String.valueOf(task.getFrequency())), 4, 0);
     }
 
@@ -64,5 +77,10 @@ public class Element extends GridPane implements StandardElement, ElementListene
                 System.out.println("Clicked");
             }
         });
+    }
+    private void setTooltip(Label label, File file) {
+        Tooltip tooltip = new Tooltip(file.getAbsolutePath());
+        tooltip.setShowDelay(new Duration(500));
+        Tooltip.install(label, tooltip);
     }
 }
