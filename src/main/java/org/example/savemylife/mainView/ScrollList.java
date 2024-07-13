@@ -13,8 +13,10 @@ import java.util.List;
 public class ScrollList extends ListView<Element> implements StandardElement {
 
     private ObservableList<Element> items = FXCollections.observableArrayList();
+    private static ScrollList instance;
 
     public ScrollList() {
+        instance = this;
         getTasks();
 
         setItems(items);
@@ -37,5 +39,17 @@ public class ScrollList extends ListView<Element> implements StandardElement {
             Element element = new Element(task);
             items.add(element);
         });
+    }
+
+    public static ScrollList getInstance() {
+        if (instance == null) {
+            instance = new ScrollList();
+        }
+        return instance;
+    }
+    public void refresh() {
+        items.clear();
+        getTasks();
+        setItems(items);
     }
 }
