@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feb6d571-7f2a-46e4-8f5f-dfab57375658" name="Changes" comment="Edit button">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/topBar/DeleteButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/topBar/TopBarButton.java" afterDir="false" />
+    <list default="true" id="feb6d571-7f2a-46e4-8f5f-dfab57375658" name="Changes" comment="Deleting tasks">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/Tray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/savemylife.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/savemylife_16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/savemylife_32.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/displayElement/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/displayElement/Element.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/ScrollList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/ScrollList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/topBar/EditButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/topBar/EditButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/topBar/TopBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/topBar/TopBar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task.json" beforeDir="false" afterPath="$PROJECT_DIR$/task.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/MainView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,26 +48,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.savemylife.newView" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Informatyka\Java\SaveMyLife\src\main\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example.savemylife" />
@@ -116,6 +119,8 @@
       <workItem from="1720455943700" duration="12784000" />
       <workItem from="1720894736338" duration="9529000" />
       <workItem from="1720904800781" duration="10558000" />
+      <workItem from="1720956492956" duration="193000" />
+      <workItem from="1720967913407" duration="2906000" />
     </task>
     <task id="LOCAL-00001" summary="Load JavaFX">
       <option name="closed" value="true" />

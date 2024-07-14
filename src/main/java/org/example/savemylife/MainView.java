@@ -11,6 +11,9 @@ public class MainView extends Stage implements StandardElement {
     public static final double SCREEN_HEIGHT = 600;
 
     public MainView() {
+
+        new Tray(this);
+
         setupLayout();
         setupConfig();
     }
