@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feb6d571-7f2a-46e4-8f5f-dfab57375658" name="Changes" comment="Updating tasks">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/interfaces/Trigger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/topBar/EditButton.java" afterDir="false" />
+    <list default="true" id="feb6d571-7f2a-46e4-8f5f-dfab57375658" name="Changes" comment="Edit button">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/topBar/DeleteButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/topBar/TopBarButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/InfoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/InfoView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/displayElement/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/displayElement/Element.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/MainVBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/MainVBox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/ScrollList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/ScrollList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/TopBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/topBar/TopBar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/mainView/TopBarButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/topBar/CreateButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/FieldFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/infoView/FieldFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/FieldHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/infoView/FieldHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/FieldsEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/infoView/FieldsEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/newView/InfoLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/infoView/InfoLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/topBar/EditButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/topBar/EditButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/topBar/TopBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/topBar/TopBar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task.json" beforeDir="false" afterPath="$PROJECT_DIR$/task.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +25,8 @@
         <option value="AnnotationType" />
         <option value="FxmlFile" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -121,7 +115,7 @@
       <workItem from="1720455505936" duration="325000" />
       <workItem from="1720455943700" duration="12784000" />
       <workItem from="1720894736338" duration="9529000" />
-      <workItem from="1720904800781" duration="8954000" />
+      <workItem from="1720904800781" duration="10558000" />
     </task>
     <task id="LOCAL-00001" summary="Load JavaFX">
       <option name="closed" value="true" />
@@ -251,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720909715238</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Edit button">
+      <option name="closed" value="true" />
+      <created>1720913902787</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1720913902787</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +287,18 @@
     <MESSAGE value="Rename InfoView" />
     <MESSAGE value="Small fix" />
     <MESSAGE value="Updating tasks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating tasks" />
+    <MESSAGE value="Edit button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit button" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

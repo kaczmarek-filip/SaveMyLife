@@ -13,15 +13,16 @@ import org.example.savemylife.data.Task;
 import org.example.savemylife.interfaces.ElementListener;
 import org.example.savemylife.interfaces.StandardElement;
 import org.example.savemylife.mainView.ScrollList;
-import org.example.savemylife.topBar.EditButton;
+import org.example.savemylife.topBar.TopBarButton;
 
 import java.io.File;
+
 @Getter
 public class Element extends GridPane implements StandardElement, ElementListener {
 
 
     private final Task task;
-    private CheckBox checkBox = new CheckBox();;
+    private CheckBox checkBox = new CheckBox();
 
     public Element(Task task) {
         this.task = task;
@@ -29,7 +30,6 @@ public class Element extends GridPane implements StandardElement, ElementListene
         setupLayout();
 
         doubleClick();
-//        mouseEntered();
     }
 
     @Override
@@ -57,8 +57,7 @@ public class Element extends GridPane implements StandardElement, ElementListene
             } else {
                 ScrollList.getInstance().getSelectionModel().clearSelection(ScrollList.getInstance().getSelectionModel().getSelectedIndex());
             }
-            EditButton.getInstance().trigger();
-            System.out.println(ScrollList.getInstance().getSelectionModel().getSelectedItems());
+            TopBarButton.parentTrigger();
         });
 
         add(checkBox, 0, 0);
@@ -68,8 +67,8 @@ public class Element extends GridPane implements StandardElement, ElementListene
         add(new Label(task.getFrequencyWithUtil()), 4, 0);
     }
 
-    private void setColumns(int ... colWidth) {
-        for(int i : colWidth) {
+    private void setColumns(int... colWidth) {
+        for (int i : colWidth) {
             ColumnConstraints col = new ColumnConstraints();
             col.setPercentWidth(i);
             col.setMaxWidth(i);
@@ -91,6 +90,7 @@ public class Element extends GridPane implements StandardElement, ElementListene
             }
         });
     }
+
     private void setTooltip(Label label, File file) {
         Tooltip tooltip = new Tooltip(file.getAbsolutePath());
         tooltip.setShowDelay(new Duration(500));

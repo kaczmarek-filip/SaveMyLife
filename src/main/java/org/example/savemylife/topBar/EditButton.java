@@ -1,16 +1,12 @@
 package org.example.savemylife.topBar;
 
-import javafx.scene.control.Button;
 import org.example.savemylife.InfoView;
 import org.example.savemylife.data.Task;
-import org.example.savemylife.displayElement.Element;
 import org.example.savemylife.interfaces.ElementListener;
 import org.example.savemylife.interfaces.Trigger;
 import org.example.savemylife.mainView.ScrollList;
 
-import java.util.ArrayList;
-
-public class EditButton extends Button implements ElementListener, Trigger {
+public class EditButton extends TopBarButton implements ElementListener, Trigger {
 
     private static EditButton instance;
     private Task task;
@@ -31,6 +27,7 @@ public class EditButton extends Button implements ElementListener, Trigger {
     @Override
     public void oneClick() {
         setOnMouseClicked(mouseEvent -> {
+
             ScrollList.getInstance().getSelectionModel().getSelectedItems().forEach(item -> {
                 InfoView.getInstance().setFields(task);
             });
@@ -44,13 +41,12 @@ public class EditButton extends Button implements ElementListener, Trigger {
 
     @Override
     public void trigger() {
-        ArrayList<Element> selectedElements = new ArrayList<>(ScrollList.getInstance().getSelectionModel().getSelectedItems());
 
         if (selectedElements.size() == 1) {
-            setVisible(true);
+            setDisable(false);
             task = selectedElements.getFirst().getTask();
         } else {
-            setVisible(false);
+            setDisable(true);
         }
     }
 }

@@ -66,10 +66,8 @@ public class FieldHelper {
 
                     if (f.getTask() == null) {
                         TaskJSON.getInstance().add(task);
-                        System.out.println("Created new task");
                     } else {
                         TaskJSON.getInstance().update(f.getTask().getId(), task);
-                        System.out.println("Updated task");
                     }
 
 

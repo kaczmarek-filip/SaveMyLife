@@ -14,6 +14,7 @@ public class TopBar extends ToolBar implements StandardElement {
     public void setupLayout() {
         getItems().add(new CreateButton("New"));
         getItems().add(EditButton.getInstance());
+        getItems().add(DeleteButton.getInstance());
     }
 
     @Override
