@@ -44,11 +44,11 @@ public class Element extends GridPane implements StandardElement, ElementListene
 
     @Override
     public void setupLayout() {
-        Label fromLabel = new Label(task.getFrom().getName());
-        Label toLabel = new Label(task.getTo().getName());
+        Label fromLabel = new Label(task.getSource().getName());
+        Label toLabel = new Label(task.getTarget().getName());
 
-        setTooltip(fromLabel, task.getFrom());
-        setTooltip(toLabel, task.getTo());
+        setTooltip(fromLabel, task.getSource());
+        setTooltip(toLabel, task.getTarget());
 
         checkBox.setOnAction(event -> {
             ScrollList.getInstance().getSelectionModel().clearSelection();

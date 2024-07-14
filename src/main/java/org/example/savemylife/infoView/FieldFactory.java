@@ -17,18 +17,18 @@ public class FieldFactory implements FieldCreator {
 
     TextField nameField = new TextField();
     TextField frequencyField = new TextField();
-    TextField fromField = new TextField();
-    Label fromSelectedLabel = new Label("");
-    TextField toField = new TextField();
-    Label toSelectedLabel = new Label("");
+    TextField sourceField = new TextField();
+    Label sourceSelectedLabel = new Label("");
+    TextField targetField = new TextField();
+    Label targetSelectedLabel = new Label("");
     ComboBox<String> frequencyComboBox = new ComboBox<>();
 
     public FieldFactory(InfoLayout grid) {
         this.grid = grid;
 
         name();
-        from();
-        to();
+        source();
+        target();
         frequency();
         submitButton();
     }
@@ -39,22 +39,22 @@ public class FieldFactory implements FieldCreator {
         add(0, label, nameField);
     }
 
-    private void from() {
-        Label label = new Label("From");
+    private void source() {
+        Label label = new Label("Source");
         Button choose = new Button("Choose directory");
 
-        fileChooser(grid, choose, fromSelectedLabel, fromField);
+        fileChooser(grid, choose, sourceSelectedLabel, sourceField);
 
-        add(1, label, choose, fromSelectedLabel);
+        add(1, label, choose, sourceSelectedLabel);
     }
 
-    private void to() {
-        Label label = new Label("To");
+    private void target() {
+        Label label = new Label("Target");
         Button choose = new Button("Choose directory");
 
-        fileChooser(grid, choose, toSelectedLabel, toField);
+        fileChooser(grid, choose, targetSelectedLabel, targetField);
 
-        add(2, label, choose, toSelectedLabel);
+        add(2, label, choose, targetSelectedLabel);
     }
 
     private void frequency() {
@@ -94,10 +94,10 @@ public class FieldFactory implements FieldCreator {
         frequencyField.setText(String.valueOf(task.getFrequency()));
         frequencyComboBox.setValue(task.getFrequencyEnum().getLabel());
 
-        fromField.setText(task.getFrom().getAbsolutePath());
-        fromSelectedLabel.setText(task.getFrom().getName());
+        sourceField.setText(task.getSource().getAbsolutePath());
+        sourceSelectedLabel.setText(task.getSource().getName());
 
-        toField.setText(task.getTo().getAbsolutePath());
-        toSelectedLabel.setText(task.getTo().getName());
+        targetField.setText(task.getTarget().getAbsolutePath());
+        targetSelectedLabel.setText(task.getTarget().getName());
     }
 }

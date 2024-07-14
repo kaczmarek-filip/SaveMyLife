@@ -12,6 +12,7 @@ module org.example.savemylife {
     requires java.desktop;
     requires static lombok;
     requires com.fasterxml.jackson.databind;
+    requires com.fasterxml.jackson.datatype.jsr310;
 
     opens org.example.savemylife to javafx.fxml;
     exports org.example.savemylife;

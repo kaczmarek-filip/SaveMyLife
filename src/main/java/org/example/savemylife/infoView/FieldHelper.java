@@ -10,6 +10,7 @@ import org.example.savemylife.data.TaskJSON;
 import org.example.savemylife.mainView.ScrollList;
 
 import java.io.File;
+import java.time.LocalDateTime;
 
 public class FieldHelper {
     static void fileChooser(InfoLayout grid, Button button, Label label, TextField field) {
@@ -44,8 +45,8 @@ public class FieldHelper {
     static void buttonActionListener(Button button, FieldFactory f) {
         button.setOnAction(e -> {
             String name = f.nameField.getText();
-            String from = f.fromField.getText();
-            String to = f.toField.getText();
+            String from = f.sourceField.getText();
+            String to = f.targetField.getText();
             String frequency = f.frequencyField.getText().trim();
             FrequencyEnum frequencyEnum = FrequencyEnum.fromString(f.frequencyComboBox.getValue());
 
@@ -59,9 +60,9 @@ public class FieldHelper {
                             new File(from),
                             new File(to),
                             Integer.parseInt(frequency),
-                            frequencyEnum
+                            frequencyEnum,
+                            LocalDateTime.now()
                     );
-
 
 
                     if (f.getTask() == null) {
@@ -69,7 +70,6 @@ public class FieldHelper {
                     } else {
                         TaskJSON.getInstance().update(f.getTask().getId(), task);
                     }
-
 
 
                     InfoView.getInstance().close();

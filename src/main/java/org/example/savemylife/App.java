@@ -3,6 +3,7 @@ package org.example.savemylife;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.Stage;
+import org.example.savemylife.backup.Backup;
 
 import java.io.IOException;
 
@@ -12,6 +13,7 @@ public class App extends Application {
         new MainView();
         Platform.setImplicitExit(false);
 
+//        Backup.main(new String[0]);
 
     }
 

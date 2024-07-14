@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Getter;
 import org.example.savemylife.interfaces.JsonMethods;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,6 +22,7 @@ public class TaskJSON implements JsonMethods<Task> {
     private TaskJSON() {
         this.taskList = new ArrayList<>();
         this.objectMapper = new ObjectMapper();
+        objectMapper.registerModule(new JavaTimeModule());
         loadTasks();
         instance = this;
     }
