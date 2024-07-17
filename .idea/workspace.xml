@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feb6d571-7f2a-46e4-8f5f-dfab57375658" name="Changes" comment="Tray icon">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/backup/Backup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/backup/Copy.java" afterDir="false" />
+    <list default="true" id="feb6d571-7f2a-46e4-8f5f-dfab57375658" name="Changes" comment="Copying files">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/logs/Log.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/data/FrequencyEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/data/FrequencyEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/data/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/data/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/data/TaskJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/data/TaskJSON.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/displayElement/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/displayElement/Element.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/infoView/FieldFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/infoView/FieldFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/infoView/FieldHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/infoView/FieldHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/savemylife/backup/Copy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/savemylife/backup/Copy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +21,7 @@
         <option value="FxmlFile" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -63,6 +55,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -140,7 +133,10 @@
       <workItem from="1720894736338" duration="9529000" />
       <workItem from="1720904800781" duration="10558000" />
       <workItem from="1720956492956" duration="193000" />
-      <workItem from="1720967913407" duration="11658000" />
+      <workItem from="1720967913407" duration="11843000" />
+      <workItem from="1721236067814" duration="19000" />
+      <workItem from="1721242439002" duration="251000" />
+      <workItem from="1721243482003" duration="915000" />
     </task>
     <task id="LOCAL-00001" summary="Load JavaFX">
       <option name="closed" value="true" />
@@ -286,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720971025995</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Copying files">
+      <option name="closed" value="true" />
+      <created>1720988547020</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1720988547020</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +326,8 @@
     <MESSAGE value="Updating tasks" />
     <MESSAGE value="Edit button" />
     <MESSAGE value="Tray icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tray icon" />
+    <MESSAGE value="Copying files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Copying files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

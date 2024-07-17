@@ -1,6 +1,7 @@
 package org.example.savemylife.backup;
 
 import org.example.savemylife.data.Task;
+import org.example.savemylife.logs.Log;
 
 import java.io.IOException;
 import java.nio.file.*;
@@ -10,8 +11,10 @@ public class Copy {
 
     private final Path sourcePath;
     private final Path targetPath;
+    private final Task task;
 
     public Copy(Task task) {
+        this.task = task;
         sourcePath = task.getSource().toPath();
         targetPath = task.getTarget().toPath();
     }
@@ -25,21 +28,22 @@ public class Copy {
                     Path targetFile = targetPath.resolve(sourcePath.relativize(sourceFile));
                     try {
                         if (Files.exists(targetFile) && !isContentDifferent(sourceFile, targetFile)) {
-                            System.out.println("The file " + sourceFile + " already exists and is identical, I omit.");
+                            new Log(task, "The file " + sourceFile + " already exists and is identical, I omit.").show();
                         } else {
                             Files.createDirectories(targetFile.getParent());
 
                             Files.copy(sourceFile, targetFile, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES);
-                            System.out.println("Copied from " + sourceFile + " to " + targetFile);
+
+                            new Log(task, "Copied from " + sourceFile + " to " + targetFile).show();
                         }
                     } catch (IOException e) {
-                        System.err.println("Error during copying " + sourceFile + " to " + targetFile + ": " + e.getMessage());
+                        new Log(task, "Error during copying " + sourceFile + " to " + targetFile + ": " + e.getMessage()).err();
                     }
                     return FileVisitResult.CONTINUE;
-                }
+                } //TODO: Dodać logi
             });
 
-            System.out.println("Synchronisation successfully completed.");
+            new Log(task, "Synchronisation successfully completed.").show();
 
         } catch (IOException e) {
             e.printStackTrace();
